@@ -79,12 +79,12 @@ const Auth = () => {
               >
                 Password
               </span>
-              <button
+              <span
                 className="show"
                 onClick={() => setPasswordType((prev) => !prev)}
               >
                 {passwordType == false ? "Show" : "Hide"}
-              </button>
+              </span>
               <button className="auth__btn">Log in</button>
             </form>
             <div className="auth__line">
