@@ -38,7 +38,7 @@ const Auth = () => {
   };
   console.log(username);
   return (
-    <div>
+    <div className="auth">
       <div className="auth__container">
         <div className="auth__img">
           <img src={AuthImg} alt="Auth" />
@@ -123,9 +123,9 @@ const Auth = () => {
       <div className="auth__footer">
         <p>
           Meta About Blog Jobs Help API Privacy Terms Locations Instagram Lite
-          Threads Contact Uploading & Non-Users Meta Verified English
+          Threads Contact Uploading & Non-Users Meta Verified 
+          English▼  ©2024 Instagram from Meta
         </p>
-        <p>English▼  ©2024 Instagram from Meta</p>
       </div>
     </div>
   );
