@@ -6,6 +6,7 @@ import "./Auth.scss";
 import instagram_title from "../../Assets/instagram__title.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 const Auth = () => {
   const [username, setUsername] = useState(false);
   const [password, setPassword] = useState(false);
@@ -36,7 +37,6 @@ const Auth = () => {
       setPasswordPlaceholder("");
     }
   };
-  console.log(username);
   return (
     <div className="auth">
       <div className="auth__container">
@@ -54,7 +54,7 @@ const Auth = () => {
                   username == true ? "auth__phone" : ""
                 }`}
                 type="text"
-                onKeyDown={handleUsername}
+                onKeyUp={handleUsername}
                 placeholder={userPlaceholder}
               />
               <span
@@ -69,7 +69,7 @@ const Auth = () => {
                   password == true ? "auth__phone" : ""
                 }`}
                 type={passwordType == false ? "password" : "text"}
-                onKeyDown={handlePassword}
+                onKeyUp={handlePassword}
                 placeholder={passwordPlaceholder}
               />
               <span
@@ -80,7 +80,7 @@ const Auth = () => {
                 Password
               </span>
               <span
-                className="show"
+                className={`show ${password == true ? "signup__show-block" : ""}`}
                 onClick={() => setPasswordType((prev) => !prev)}
               >
                 {passwordType == false ? "Show" : "Hide"}
@@ -107,7 +107,7 @@ const Auth = () => {
           </div>
           <div className="auth__signUp">
             <p className="auth__signUp-text">Don't have an account?</p>
-            <h5 className="auth__signUp-title">Sign up</h5>
+            <Link to='/signup' className="auth__signUp-title">Sign up</Link>
           </div>
           <div className="auth__social">
             <p className="auth__social-title">Get the app</p>
