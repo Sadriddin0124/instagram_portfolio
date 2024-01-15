@@ -104,6 +104,7 @@
 
 .auth__input {
   width: 250px;
+  height: 41.6px;
   font-size: 16px;
   margin: 0;
   outline: none;
@@ -165,7 +166,7 @@
   display: none;
   padding: 5px;
   right: 17px;
-  top: 53px;
+  top: 56px;
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
@@ -323,7 +324,7 @@
 .signup__show {
     position: absolute;
     right: 17px;
-    top: 153px;
+    top: 160px;
     padding: 5px;
     cursor: pointer;
     font-size: 14px;
@@ -369,6 +370,12 @@
 
 .signup__focus2 {
     top: 155px;
+    font-size: 10px;
+    transition: 0.3s all;
+    z-index: 1;
+}
+.signup__focus4 {
+    top: 58px;
     font-size: 10px;
     transition: 0.3s all;
     z-index: 1;

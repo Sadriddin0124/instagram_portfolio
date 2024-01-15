@@ -105,9 +105,9 @@ const SignUp = () => {
                 Mobile Number or Email
               </span>
               <input type="text" className={`auth__input ${fullname == true? "signup__fullname2" : ""}`} onKeyUp={handleFullname} placeholder={fullnamePlaceholder}/>
-              <span className={`signup__fullname ${fullname == true? "signup__focus2" : ""}`} >Fullname</span>
+              <span className={`signup__fullname ${fullname == true? "signup__focus4" : ""}`} >Fullname</span>
               <input type="text" className={`auth__input ${user == true ? "signup__username2" : ""}`} onKeyUp={handleUser} placeholder={userplaceholder}/>
-              <span className={`signup__username ${user == true ? "signup__focus3" : ""}`}>Firstname</span>
+              <span className={`signup__username ${user == true ? "signup__focus3" : ""}`}>Username</span>
               <input
                 className={`auth__input ${
                   password == true ? "auth__phone" : ""
