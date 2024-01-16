@@ -24,7 +24,7 @@ const SignUp = () => {
       setUsername(false);
       setTimeout(() => {
         setUsernamePlaceholder("Mobile Number or Email");
-      }, 200);
+      }, 100);
     } else {
       setUsername(true);
       setUsernamePlaceholder("");
@@ -35,7 +35,7 @@ const SignUp = () => {
       setFullname(false);
       setTimeout(() => {
         setFullnamePlaceholder("Fullname");
-      }, 200);
+      }, 100);
     } else {
       setFullname(true);
       setFullnamePlaceholder("");
@@ -46,7 +46,7 @@ const SignUp = () => {
       setUser(false);
       setTimeout(() => {
         setUserPlaceholder("Username");
-      }, 200);
+      }, 100);
     } else {
       setUser(true);
       setUserPlaceholder("");
@@ -57,7 +57,7 @@ const SignUp = () => {
       setPassword(false);
       setTimeout(() => {
         setPasswordPlaceholder("Password");
-      }, 200);
+      }, 100);
     } else {
       setPassword(true);
       setPasswordPlaceholder("");

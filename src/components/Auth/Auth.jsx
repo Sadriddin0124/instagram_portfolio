@@ -7,7 +7,9 @@ import instagram_title from "../../Assets/instagram__title.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Auth = () => {
+  const navigate = useNavigate()
   const [username, setUsername] = useState(false);
   const [password, setPassword] = useState(false);
   const [passwordType, setPasswordType] = useState(false);
@@ -20,7 +22,7 @@ const Auth = () => {
       setUsername(false);
       setTimeout(() => {
         setUserPlaceholder("Phone number, username or email");
-      }, 200);
+      }, 100);
     } else {
       setUsername(true);
       setUserPlaceholder("");
@@ -31,12 +33,22 @@ const Auth = () => {
       setPassword(false);
       setTimeout(() => {
         setPasswordPlaceholder("Password");
-      }, 200);
+      }, 100);
     } else {
       setPassword(true);
       setPasswordPlaceholder("");
     }
   };
+  const loginUser =(e)=> {
+    e.preventDefault()
+    let username = e.target[0].value
+    let password = e.target[1].value
+    console.log(username);
+    console.log(password);
+    if(username === "farkhodo_vich" && password === "Sadriddin777") {
+      navigate('/profile')
+    }
+  }
   return (
     <div className="auth">
       <div className="auth__container">
@@ -44,11 +56,11 @@ const Auth = () => {
           <img src={AuthImg} alt="Auth" />
         </div>
         <div className="auth__register">
-          <div className="auth__login">
+          <div className="auth__login" >
             <div className="auth__login-title">
               <img src={instagram_title} alt="instagram" />
             </div>
-            <form className="auth__form">
+            <form className="auth__form" id="login" onSubmit={loginUser}>
               <input
                 className={`auth__input ${
                   username == true ? "auth__phone" : ""
@@ -85,7 +97,7 @@ const Auth = () => {
               >
                 {passwordType == false ? "Show" : "Hide"}
               </span>
-              <button className="auth__btn">Log in</button>
+              <button className="auth__btn" type='submit' form='login'>Log in</button>
             </form>
             <div className="auth__line">
               <div className="auth__first-line"></div>
