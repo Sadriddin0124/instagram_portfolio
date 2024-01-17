@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+%flex-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.profile {
+    margin-left: 244px;
+    // @extend %flex-center;
+    // gap: 30px;
+}
+
+.profile__top {
+    max-width: 935px;
+    width: 100%;
+    padding: 30px 20px;
+    @extend %flex-center;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+.profile__img {
+    max-width: 290px;
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        padding: 5px;
+        border: 2px solid silver;
+    }
+}
+
+.profile__top-text {
+    @extend %flex-column;
+    align-items: start;
+}
+
+.profile__firstline {
+    @extend %flex-center;
+    gap: 15px;
+}
+
+.profile__btn {
+    padding: 5px 16px;
+    border: none;
+    background-color: #EFEFEF;
+    @extend %flex-center;
+    border-radius: 8px;
+    font-size: .875rem;
+    font-weight: 600;
+}
+
+.profile__icon {
+    font-size: 24px;
+}
+
+.profile__statistics {
+    @extend %flex-center;
+    gap: 25px;
+    div {
+        @extend %flex-center;
+        gap: 6px;
+        h4 {
+            font-size: 14px;
+            margin-top: -5px;
+        }
+    }
+}
+
+.profile__fullname {
+    font-size: 18px;
+    font-family: monospace;
+    span {
+        color: silver;
+    }
+}
+
+.profile__btn2 {
+    background-color: rgba(192, 192, 192, 0.611);
+    @extend %flex-center;
+    padding: 0 10px;
+    width: 120px;
+    height: 30px;
+    padding: 0;
+    .threads {
+        margin-top: -10px;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    p {
+        margin-top: 4px;
+
+    }
+}
+
+@media (max-width: 1264px) {
+    .profile {
+        margin-left: 60px;
+    }
+}
+
+@media (max-width:769px) {
+    .profile__img img {
+        width: 77px;
+        height: 77px;
+        padding: 3px;
+    }
+    .profile__top {
+        align-items: flex-start;
+    }
+    .profile {
+        margin: 0;
+    }
+    .profile__statistics {
+        position: absolute;
+        top: 50%;
+        left: 10%;
+    }
+}

@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-const Auth = () => {
+const Auth = ({setSidebarNone, sidebarNone}) => {
   const navigate = useNavigate()
   const [username, setUsername] = useState(false);
   const [password, setPassword] = useState(false);
@@ -45,6 +45,7 @@ const Auth = () => {
     let password = e.target[1].value
     console.log(username);
     console.log(password);
+    localStorage.setItem("sidenone", true)
     if(username === "farkhodo_vich" && password === "Sadriddin777") {
       navigate('/profile')
     }
